@@ -23,6 +23,9 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<vaadin.version>8.2.0</vaadin.version>
+		
+		<!-- Dependency check -->
+		<dependency-check.version>3.3.2</dependency-check.version>
 	</properties>
 
 	<dependencies>
@@ -91,6 +94,17 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+            <plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+                <version>${dependency-check.version}</version>
+                <configuration>
+                    <format>ALL</format>
+                    <!-- commenting build fail flag as this is an old
+                         and insecure version of Spring Pet Clinic -->
+                    <!-- <failBuildOnCVSS>5</failBuildOnCVSS> -->
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 </project>
