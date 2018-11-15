@@ -11,6 +11,7 @@ $income-color : #82C344 !default;
 $v-focus-color: $income-color;
 $v-focus-style: 0 0 3px 2px $v-focus-color;
 $v-selection-color: $v-focus-color !default;
+$v-background-color: #ffffff;
 
 
 
@@ -99,5 +100,10 @@ $v-selection-color: $v-focus-color !default;
 	.title-color {
 		color: #4c7235;
 	}
+
+	.scrollable {
+		overflow: auto;
+	}
+
 }
 

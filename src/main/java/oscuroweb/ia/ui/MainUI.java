@@ -41,15 +41,16 @@ public class MainUI extends UI {
 		this.setSizeFull();
 
 		BorderLayout mainLayout = new BorderLayout();
-		//mainLayout.setSizeFull();
+		mainLayout.setSizeFull();
 		mainLayout.setSpacing(false);
 		mainLayout.setMargin(false);
+		mainLayout.addStyleName("scrollable");
 
 		Header header = new Header();
 		Footer footer = new Footer();
 		VerticalLayout content = new VerticalLayout();
 		content.setSizeFull();
-
+		content.addStyleName("v-scrollable");
 		mainLayout.addComponent(header, BorderLayout.Constraint.PAGE_START);
 		//mainLayout.addComponent(footer, BorderLayout.Constraint.PAGE_END);
 		mainLayout.addComponent(content, BorderLayout.Constraint.CENTER);
