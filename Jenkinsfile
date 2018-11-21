@@ -66,7 +66,7 @@ pipeline {
         stage('Run Docker image') {
             steps {
                 echo "-=- run Docker image -=-"
-                sh "docker run -p 8080:8080 --network ci --name ${env.CONTAINER_NAME} -d ${IMAGE_NAME}:${env.BUILD_ID}"
+                sh "docker run -p 8080:8080 --network ci -e SERVICE_HOSTNAME=ci-income-predictor-service --name ${env.CONTAINER_NAME} -d ${IMAGE_NAME}:${env.BUILD_ID}"
             }
         }
 
